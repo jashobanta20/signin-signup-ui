@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sliding Login/Register UI</title>
+  <link rel="stylesheet" href="Login-signup.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container" id="main-container">
+  <div class="form-container sign-in-container">
+    <form>
+      <h2>Login</h2>
+      <div class="input-box">
+        <input type="text" placeholder="Username" required>
+        <i class='bx bx-user'></i>
+        <img src="https://img.icons8.com/ios-filled/50/000000/user.png" alt="user" class="user-icon">
+      </div>
+      <div class="input-box">
+        <input type="password" placeholder="Password" required>
+        <i class='bx bx-lock-alt'></i>
+        <img src="https://img.icons8.com/ios-filled/50/000000/lock.png" alt="lock" class="user-icon">
+      </div>
+      <div class="forget-link">
+        <a href="#">Forgot Password?</a>
+      </div>
+      <button type="submit" class="btn" id="login">Login</button>
+      <p class="another">or login with social platforms</p>
+      <div class="social-icons" id="icons">
+          <button type="submit" class="social-button"><img src="https://img.icons8.com/?size=100&id=85795&format=png&color=000000" alt="google"></button>
+          <button type="submit" class="social-button"><img src="https://img.icons8.com/?size=100&id=F1Q_pDY0qwkx&format=png&color=000000" alt="facebook"></button>
+          <button type="submit" class="social-button"><img src="https://img.icons8.com/?size=100&id=62856&format=png&color=000000" alt="github"></button>
+          <button type="submit" class="social-button"><img src="https://img.icons8.com/?size=100&id=102748&format=png&color=000000" alt="linkedin"></button>
+      </div>
+    </form>
+  </div>
+
+  <div class="form-container sign-up-container">
+    <form>
+      <h2>Register</h2>
+      <div class="input-box">
+        <img src="https://img.icons8.com/ios-filled/50/000000/user.png" alt="user" class="user-icon">
+        <input type="text" placeholder="Username" required>
+        <i class='bx bx-user'></i>
+      </div>
+      <div class="input-box">
+        <input type="email" placeholder="Email" required>
+        <i class='bx bx-envelope'></i>
+        <img src="https://img.icons8.com/?size=100&id=pJJmXPomYuPv&format=png&color=000000" alt="email" class="user-icon">
+      </div>
+      <div class="input-box">
+        <input type="password" placeholder="Password" required>
+        <i class='bx bx-lock-alt'></i>
+        <img src="https://img.icons8.com/ios-filled/50/000000/lock.png" alt="lock" class="user-icon">
+      </div>
+      <button type="submit" class="btn" id="register">Register</button>
+      <p class="other">or register with social platforms</p>
+      <div class="social-icons" id="icons">
+          <button type="submit" class="social-button"><img src="https://img.icons8.com/?size=100&id=85795&format=png&color=000000" alt="google"></button>
+          <button type="submit" class="social-button"><img src="https://img.icons8.com/?size=100&id=F1Q_pDY0qwkx&format=png&color=000000" alt="facebook"></button>
+          <button type="submit" class="social-button"><img src="https://img.icons8.com/?size=100&id=62856&format=png&color=000000" alt="github"></button>
+          <button type="submit" class="social-button"><img src="https://img.icons8.com/?size=100&id=102748&format=png&color=000000" alt="linkedin"></button>
+      </div>
+    </form>
+  </div>
+
+  <div class="overlay-container">
+    <div class="overlay">
+      <div class="overlay-panel overlay-left">
+        <h2>Welcome Back!</h2>
+        <p>If you already have an account, login here</p>
+        <button class="btn ghost" id="login-btn">Login</button>
+      </div>
+      <div class="overlay-panel overlay-right">
+        <h2>Hello, Friend!</h2>
+        <p>Don't have an account? Register here</p>
+        <button class="btn ghost" id="register-btn">Register</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const container = document.getElementById('main-container');
+  const registerBtn = document.getElementById('register-btn');
+  const loginBtn = document.getElementById('login-btn');
+
+  registerBtn.addEventListener('click', () => {
+    container.classList.add("active");
+  });
+
+  loginBtn.addEventListener('click', () => {
+    container.classList.remove("active");
+  });
+</script>
+
+</body>
+</html>
