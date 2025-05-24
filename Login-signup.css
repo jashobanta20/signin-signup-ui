@@ -261,6 +261,9 @@ h2 {
 .social-button img[alt="github"]{
     transform: scale(1.4);
 }
+.social-button img[alt="linkedin"]{
+    transform: scale(1.2);
+}
 .other{
     font-size: 15px;
     margin: 0px;
